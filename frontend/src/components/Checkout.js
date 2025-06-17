@@ -16,7 +16,7 @@ function Checkout({cart}){
             orders: cart
         };
         if (!useremail || !name || !useraddress) return alert("Please fill all fields");
-        await axios.post('http://localhost:5000/api/user/checkout', checkouts)
+        await axios.post('https://food-app-ecommerce.onrender.com/api/user/checkout', checkouts)
       .then(result=>{
         console.log(result)
         if(result.data==="Success"){

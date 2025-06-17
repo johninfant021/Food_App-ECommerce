@@ -16,7 +16,7 @@ const handleSubmit = async (e) => {
   }
 
   try {
-    const response = await axios.post('http://localhost:5000/api/user/reg', {
+    const response = await axios.post('https://food-app-ecommerce.onrender.com/api/user/reg', {
       username,
       email,
       password,

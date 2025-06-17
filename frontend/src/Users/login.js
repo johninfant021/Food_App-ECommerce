@@ -13,7 +13,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault(); 
     if (!email || !password) return alert("Please fill all fields");
-    await axios.post('http://localhost:5000/api/user/login', {
+    await axios.post('https://food-app-ecommerce.onrender.com/api/user/login', {
         email,
         password,
       })
