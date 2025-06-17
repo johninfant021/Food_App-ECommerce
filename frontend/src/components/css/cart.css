@@ -1,0 +1,32 @@
+.cart-container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    height: 30vh;
+    border: 1px solid black;
+}
+
+.cart-product-details{
+
+    justify-content: center;
+    height: 10vh;
+    gap: 20px;
+}
+.cart-product-quantity{
+    display: flex;
+    gap: 10px;
+}
+h1,p{
+    text-align: center;
+}
+.remove-btn{
+    background-color: gray;
+    color: white;
+}
+.check-btn{
+    background-color: chartreuse;
+    color: blue;
+    border-radius: 10%;
+}

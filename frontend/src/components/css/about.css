@@ -1,0 +1,23 @@
+.abo-head{
+    
+    font-size: 30px;
+}
+.abo-para{
+    text-align: justify;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.abo{
+    width: 60vw;
+    margin: 0 auto 30px;
+    line-height:4vh;
+    text-align: center;
+    padding: 30px;
+    border: 1px solid black;
+    box-shadow: 1px 2px 1px 2px black;
+    border-radius: 10px;
+}
+.abo p{
+        text-align: justify;
+        font-size: 3vh;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+}

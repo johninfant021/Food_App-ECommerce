@@ -1,0 +1,34 @@
+.product-container{
+    width:250px;
+    height: 350px;
+    border: 1px solid black;
+    margin: 20px;
+    text-align: center;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: flex-end;
+    box-shadow: 1px 1px 1px 0 black;
+    border-radius: 10%;
+    background-color: beige;
+}
+.product-container .product img{
+    height: 100px;
+    width:100px;
+    border-radius: 10%;
+    border: 3px solid rebeccapurple;
+}
+.button-cart{
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border-radius: 10%;
+    border: none;
+}
+.product-name{
+    font-family:cursive;
+    margin: 20px;
+    font-weight: 500;
+}
+.remove{
+    background-color: red;
+}
