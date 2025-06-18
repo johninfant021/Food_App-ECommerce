@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+  import './css/reg.css';
 
 function Register() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+
 
 const handleSubmit = async (e) => {
   e.preventDefault();
@@ -42,10 +44,10 @@ const handleSubmit = async (e) => {
 
   return (
     <>
-    <div className="d-flex align-items-center justify-content-center vh-100">
-    <main className="form-signin w-25 m-auto">
+    <div className="container-form">
+    <main className="form-signin m-auto">
     <form onSubmit={handleSubmit}>
-      <h1 className="h3 mb-3 fw-normal text-center">Sign up</h1>
+      <h1 className="head-reg">Sign up</h1>
   
       <div className="form-floating  my-3">
         <input
@@ -88,12 +90,13 @@ const handleSubmit = async (e) => {
         />
         <label htmlFor="floatingPassword">Password</label>
       </div>
-  
-      <button className="btn btn-primary w-100 py-2 mt-3" type="submit">
+  <div className='btn-reg'>
+<button className="btn btn-primary py-2 mt-3" type="submit">
         Sign Up
       </button>
+  </div>
+      
     </form>
-  
     <div className="mt-3 text-center">
       <Link to="/login">Already have an account? Login</Link>
     </div>

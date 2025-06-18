@@ -2,8 +2,6 @@ import { Link } from 'react-router-dom';
 import './css/nav.css'
 function Nav(){
     return(
-        <>
-          <div className="container">
   <header className="nav-cont">
   <h2>Sakthi Restaurant</h2>
     <ul className="nav nav-pills">
@@ -21,8 +19,6 @@ function Nav(){
       </li>
     </ul>
   </header>
-</div>
-        </>
     )
 }
 

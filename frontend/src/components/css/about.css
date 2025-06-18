@@ -1,5 +1,4 @@
 .abo-head{
-    
     font-size: 30px;
 }
 .abo-para{
@@ -16,8 +15,21 @@
     box-shadow: 1px 2px 1px 2px black;
     border-radius: 10px;
 }
+.img-fluid{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
 .abo p{
         text-align: justify;
         font-size: 3vh;
         font-family: Georgia, 'Times New Roman', Times, serif;
+}
+@media (max-width:600px) {
+    .align-head{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }  
+    .abo{
+    width: 90vw;
+    }  
 }

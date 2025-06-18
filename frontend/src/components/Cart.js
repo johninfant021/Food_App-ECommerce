@@ -45,9 +45,10 @@ const decreaseQuantity = (id) => {
                 <p className='empty-cart-msg'>Your cart is empty.</p>
             ) : (
                 cart.map((product) => (
-                    <div className="cart-container" key={product.id}>
+                    <div className='cart-cont'>
+                    <div className="cart" key={product.id}>
                         <div className="cart-product">
-                            <img src={product.img} alt={product.name} height="100px" width="100px" />
+                            <img src={product.img} alt={product.name} height="100px" width="100px" className='pro-img' />
                         </div>
                         <div className="cart-product-details">
                             <h3 className="cart-product-name">{product.name}</h3>
@@ -59,6 +60,7 @@ const decreaseQuantity = (id) => {
                             <button className="qty-btn" onClick={() => increaseQuantity(product.id)}>+</button>
                             <button className='remove-btn' onClick={() => removeCartItem(product.id)}>Remove</button>
         </div>
+                    </div>
                     </div>
                 ))
             )}

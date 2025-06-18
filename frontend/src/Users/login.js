@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import './css/log.css'
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -32,11 +33,11 @@ function Login() {
   
 
   return (
-     <div className="d-flex align-items-center justify-content-center vh-100">
-    <main className="form-signin w-25 m-auto">
+     <div className="container-form">
+    <main className="form-signin m-auto">
       <form onSubmit={handleSubmit}>
         
-        <h1 className="h3 mb-3 fw-normal text-center">Login</h1>
+        <h1 className="head-reg">Login</h1>
         <div className="form-floating my-3">
           <input
             type="email"
@@ -61,11 +62,11 @@ function Login() {
           />
           <label htmlFor="floatingPassword">Password</label>
         </div>
-
-       
-        <button className="btn btn-primary w-100 py-2 mt-3" type="submit">
+  <div className='btn-reg'>
+    <button className="btn btn-primary w-100 py-2 mt-3" type="submit">
           Login
         </button>
+  </div>
       </form>
       <div className="mt-3 text-center">
       <Link to='/'>Does not account? sign up</Link>
