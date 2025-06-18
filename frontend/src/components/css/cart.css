@@ -27,10 +27,10 @@
 }
 h1,p{
     text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 .remove-btn{
-    background-color: gray;
+    background-color: rgb(28, 28, 28);
     color: white;
 }
 .check-btn{
@@ -41,8 +41,23 @@ h1,p{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border: 1px solid black;
 }
+.qty-btn{
+    border-radius: 100%;
+    font-weight: bold;
+}
 @media (max-width:600px) {
     .cart{
-        width: 90vw;
+        width: 50vw;
+        flex-direction: column;
+        height: 50vh;
+        border-radius: 10px;
+    }
+    /* .cart-product-details{
+        justify-content: center;
+        align-items: center;
+        
+    } */
+    .cart-product-name{
+        text-align: center;
     }
 }

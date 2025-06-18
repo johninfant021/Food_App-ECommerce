@@ -52,7 +52,7 @@ const decreaseQuantity = (id) => {
                         </div>
                         <div className="cart-product-details">
                             <h3 className="cart-product-name">{product.name}</h3>
-                            <p className="cart-product-price">Price: ₹{product.price} Per Product</p>
+                            <p className="cart-product-price">Price: ₹{product.price}</p>
                         </div>
                         <div className="cart-product-quantity">
                             <button className="qty-btn" onClick={() => decreaseQuantity(product.id)}>-</button>
