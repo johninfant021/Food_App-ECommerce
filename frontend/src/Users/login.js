@@ -7,12 +7,13 @@ function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-
+  const [loading,setloading]=useState(false)
   const user_email=email;
   const user_TrimmedMail=user_email.replace("@gmail.com"," ")
 
   const handleSubmit = async (e) => {
     e.preventDefault(); 
+    setloading(true)
     if (!email || !password) return alert("Please fill all fields");
     await axios.post('https://food-app-ecommerce.onrender.com/api/user/login', {
         email,
@@ -22,10 +23,12 @@ function Login() {
         console.log(result)
         if(result.data==="Success"){
           localStorage.setItem("User_TrimmedMail",user_TrimmedMail)
+          setloading(false)
             navigate('/home'); 
         }
         else{
             alert("The password is incorrect")
+            setloading(false)
         }
       })
       .catch (err=>console.log(err)) 
@@ -33,7 +36,11 @@ function Login() {
   
 
   return (
-     <div className="container-form">
+     <>
+           {loading ? (
+        <h2 style={{ textAlign: "center", marginTop: "100px" }}>Loading...</h2>
+      ) : (
+             <div className="container-form">
     <main className="form-signin m-auto">
       <form onSubmit={handleSubmit}>
         
@@ -73,6 +80,9 @@ function Login() {
       </div>
     </main>
     </div>
+      )}
+
+    </>
   );
 }
 
