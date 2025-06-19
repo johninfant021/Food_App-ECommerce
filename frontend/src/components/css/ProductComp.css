@@ -1,15 +1,15 @@
 .product-container{
-    width:250px;
-    height: 350px;
+    width:30vw;
+    height: 45vh;
     border: 1px solid black;
     margin: 20px;
     text-align: center;
     padding: 20px;
     justify-content: space-between;
     align-items: flex-end;
-    box-shadow: 1px 1px 1px 0 black;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     border-radius: 10%;
-    background-color: beige;
+    background:linear-gradient(beige,pink,beige)
 }
 .product-container .product img{
     height: 100px;
@@ -25,9 +25,10 @@
     border: none;
 }
 .product-name{
-    font-family:cursive;
-    margin: 20px;
-    font-weight: 500;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin: 10px;
+    font-size: 1rem;
 }
 .remove{
     background-color: red;
