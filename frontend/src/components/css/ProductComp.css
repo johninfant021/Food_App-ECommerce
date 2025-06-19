@@ -1,14 +1,14 @@
 .product-container{
-    width:30vw;
-    height: 45vh;
+    width:200px;
+    height: 300px;
     border: 1px solid black;
     margin: 20px;
     text-align: center;
     padding: 20px;
     justify-content: space-between;
     align-items: flex-end;
-   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    border-radius: 10%;
+    box-shadow: 1px 1px 1px 0 black;
+    border-radius: 10% 0 10% 0;
     background:linear-gradient(beige,pink,beige)
 }
 .product-container .product img{
