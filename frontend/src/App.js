@@ -8,7 +8,15 @@ import Checkout from './components/Checkout';
 import About from './components/about';
 
 function App() {
-  const[cart,setcart]=useState('')
+  const [cart, setcart] = useState(() => {
+  const storedCart = localStorage.getItem("cart");
+  try {
+    return storedCart ? JSON.parse(storedCart) : [];
+  } catch {
+    return [];
+  }
+});
+
   return (
     <Router>
       <Routes>
