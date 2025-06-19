@@ -19,7 +19,7 @@ function ProductComp({product,cart,setcart}){
             <div className="product-details">
                 <h3 className="product-name">{name}</h3>
                 {/* <h4>Quantity : {product.quantity}</h4> */}
-                <p className="product-price">Price :{product.price}</p>
+                <p className="product-price">Price : 💸 {product.price}</p>
                 {
                     cart.includes(product) ? (
                         <button className='button-cart remove' onClick={removecart}>Remove Cart</button>
