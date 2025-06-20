@@ -1,35 +1,53 @@
-.product-container{
-    width:200px;
-    height: 300px;
-    border: 1px solid black;
-    margin: 20px;
-    text-align: center;
-    padding: 20px;
-    justify-content: space-between;
-    align-items: flex-end;
-    box-shadow: 1px 1px 1px 0 black;
-    border-radius: 10% 0 10% 0;
-    background:linear-gradient(beige,pink,beige)
+.product-container {
+  width: 200px;
+  height: 300px;
+  border: 1px solid black;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px 1px 1px 0 black;
+  border-radius: 10% 0 10% 0;
+  background: linear-gradient(beige, pink, beige);
 }
-.product-container .product img{
-    height: 100px;
-    width:100px;
-    border-radius: 10%;
-    border: 3px solid rebeccapurple;
+
+.product-container .product img {
+  height: 100px;
+  width: 100px;
+  border-radius: 10%;
+  border: 3px solid rebeccapurple;
 }
-.button-cart{
-    background-color: green;
-    color: white;
-    padding: 10px;
-    border-radius: 10%;
-    border: none;
+
+.button-cart {
+  background-color: green;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
-.product-name{
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-    margin: 10px;
-    font-size: 1rem;
+
+.button-cart:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
 }
-.remove{
-    background-color: red;
+
+.remove {
+  background-color: red;
+}
+
+.product-name {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.product-price {
+  font-size: 0.95rem;
+  color: #333;
 }

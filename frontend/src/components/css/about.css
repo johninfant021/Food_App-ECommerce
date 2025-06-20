@@ -1,37 +1,40 @@
-.abo-head{
-    font-size: 30px;
+.abo {
+  background-color: #fff0f5;
+  padding: 40px 20px;
+  margin-top: 30px;
+  line-height: 1.8;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
-.abo-para{
-    text-align: justify;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+
+.abo h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: #5a2a83;
+  margin-bottom: 20px;
 }
-.abo{
-    width: 60vw;
-    margin: 0 auto 30px;
-    letter-spacing: 1px;
-    line-height:4vh;
-    text-align: center;
-    padding: 30px;
-    border: 1px solid black;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    border-radius: 10px;
+
+.abo p {
+  text-align: justify;
+  font-size: 1.05rem;
+  color: #333;
 }
-.img-fluid{
-    border-radius: 15% 0 15% 0;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-}
-.abo p{
-        text-align: justify;
-        font-size: 3vh;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-}
-@media (max-width:600px) {
-    .align-head{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }  
-    .abo{
-    width: 90vw;
-    }  
+
+@media (max-width: 600px) {
+  .abo {
+    padding: 20px 15px;
+    width: 95%;
+  }
+
+  .abo h3 {
+    font-size: 1.5rem;
+  }
+
+  .abo p {
+    font-size: 0.95rem;
+  }
 }
