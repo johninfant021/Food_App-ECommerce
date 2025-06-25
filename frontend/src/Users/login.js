@@ -38,7 +38,9 @@ function Login() {
   return (
      <>
            {loading ? (
-        <h2 style={{ textAlign: "center", marginTop: "100px" }}>Loading...</h2>
+            <div className='loading'>
+              <h2>Loading...</h2>
+            </div>
       ) : (
              <div className="container-form">
     <main className="form-signin m-auto">
@@ -76,7 +78,7 @@ function Login() {
   </div>
       </form>
       <div className="mt-3 text-center">
-      <Link to='/'>Does not account? sign up</Link>
+      <Link to='/' className='already'>Does not account? sign up</Link>
       </div>
     </main>
     </div>

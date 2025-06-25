@@ -50,7 +50,9 @@ function Register() {
   return (
     <>
       {loading ? (
-        <h2 style={{ textAlign: "center", marginTop: "100px" }}>Loading...</h2>
+        <div className='loading'>
+          <h2>Loading...</h2>
+        </div>
       ) : (
         <div className="container-form">
           <main className="form-signin m-auto">
@@ -107,7 +109,7 @@ function Register() {
             </form>
 
             <div className="mt-3 text-center">
-              <Link to="/login">Already have an account? Login</Link>
+              <Link to="/login" className='already'>Already have an account? Login</Link>
             </div>
           </main>
         </div>

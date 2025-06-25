@@ -3,18 +3,30 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: antiquewhite;
+    /* background-color: #0a100d; */
+    background: linear-gradient(#0a100d,#b9baa3);
+    /* background: radial-gradient(#fefae0); */
 }
 .form-signin{
     width: 30vw;
     border: 1px solid black;
-    background: radial-gradient(antiquewhite,white);
+    background-color: #b9baa3;
+    text-shadow: 0.5px 1px black;
     padding: 25px 15px;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.already{
+    text-decoration: none;
+    color: #0a100d;
+    text-transform: capitalize;
+    text-shadow: 1px 1px black;
 }
 .head-reg{
     font-weight: 400;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 0.5px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;; */
     text-transform: capitalize;
     font-style:oblique;
     /* box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px; */
@@ -32,4 +44,16 @@
     .form-signin{
     width: 80vw;
     }
+}
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 800;
+    font-size: xx-large;
+    letter-spacing: 1px;
+    text-shadow: 1px 0.6px #0a100d;
+    background-color: #b9baa3;
 }

@@ -22,6 +22,7 @@
   text-align: justify;
   font-size: 1.05rem;
   color: #333;
+  text-shadow: 1px 0.5px black;
 }
 
 @media (max-width: 600px) {

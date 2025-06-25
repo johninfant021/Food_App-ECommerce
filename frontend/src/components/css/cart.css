@@ -14,7 +14,17 @@
     width: 40vw;
     border: 1px solid black;
 }
-
+.loading1{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 800;
+    font-size: xx-large;
+    letter-spacing: 1px;
+    text-shadow: 1px 0.6px #0a100d;
+}
 .cart-product-details{
 
     justify-content: center;

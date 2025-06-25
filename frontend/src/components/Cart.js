@@ -42,7 +42,9 @@ const decreaseQuantity = (id) => {
         <>
         <Nav/>
             {cart.length === 0 ? (
-                <p className='empty-cart-msg'>Your cart is empty.</p>
+                <div className='loading1'>
+                    <p className='empty-cart-msg'>Your cart is empty.</p>
+                </div>
             ) : (
                 cart.map((product) => (
                     <div className='cart-cont'>
