@@ -42,7 +42,7 @@ const User_TrimmedMail=localStorage.getItem("User_TrimmedMail")
     return(
         <>
         <Nav />
-        <h2 className="text-center user-name">Hi, {username || User_TrimmedMail}</h2>
+        <h4 className="text-center user-name">Hi, {username || User_TrimmedMail}</h4>
         <div className="products-container">
         {
         products.map((product)=>{

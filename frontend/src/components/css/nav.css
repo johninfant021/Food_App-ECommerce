@@ -6,8 +6,9 @@
     justify-content: space-between;
     padding: 10px;
     margin: 0;
-    border-bottom: 1px solid black;
+    border-bottom:1px double black;
     background-color: #f2b5d4;
+    
 }
 .nav-link{
     color: black;
@@ -31,5 +32,15 @@
     justify-content: space-between;
     padding: 20px;
     border-bottom: 1px solid black;
+}
+h2{
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 0.5px;
+    touch-action: cross-slide-x;
+}
+.nav-link{
+    font-size: medium;
 }
 }
