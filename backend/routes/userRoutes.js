@@ -37,19 +37,6 @@ router.post('/reg', async (req, res) => {
 router.post('/login',async(req,res)=>{
     const{email,password}=req.body;
     const user=await User.findOne({email})
-    // .then(user=>{
-    //     if(user){
-    //         if(user.password === password){
-    //             res.json("Success")
-    //         }
-    //         else{
-    //             res.json("the password is incorrect")
-    //         }
-    //     }
-    //     else{
-    //         res.json("No record excisted")
-    //     }
-    // })
     if(!user){
         return res.json("No record excisted")
     }
@@ -57,10 +44,6 @@ router.post('/login',async(req,res)=>{
     if(!ismatch){
         res.json("the password is incorrect")
     }
-    else{
-         res.json("Success")
-    }
-
     const token=jwt.sign({id:user._id,email:user.email},"mysecret",{expiresIn:"1h"});
     res.json({token})
 })
