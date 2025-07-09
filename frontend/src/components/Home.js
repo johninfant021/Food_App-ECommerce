@@ -44,7 +44,7 @@ useEffect(()=>{
       },
     })
     const data=await res.json()
-    setmessage(data)
+    setmessage(data.message)
   }
   fetchdata();
 },[])
