@@ -49,7 +49,9 @@ router.post('/login',async(req,res)=>{
 })
 
 router.get("/home",authMiddleware,(req,res)=>{
-    res.json({message:`Welcome ${req.user.email.replace("@gmail.com"," ")}`})
+      const email = req.user.email;
+  const username = email.split("@")[0];
+  res.json({ message: `Welcome ${username}` });
 })
 
 router.post('/checkout', async (req, res) => {
