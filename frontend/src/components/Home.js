@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProductComp from "./ProductComp";
 import './css/Home.css'
 import Nav from "./Nav";
@@ -34,15 +34,30 @@ const data=[
   
 
 const [products]=useState(data);
+const [message,setmessage]=useState("")
+useEffect(()=>{
+  const fetchdata= async()=>{
+    const token=localStorage.getItem("token")
+    const res= await fetchdata("https://food-app-ecommerce.onrender.com/api/user/home",{
+      Headers:{
+        Authorization:`Bearer ${token}`
+      },
+    })
+    const data=await res.json()
+    setmessage(data)
+  }
+  fetchdata();
+},[])
 
-const username=localStorage.getItem("username")
-const User_TrimmedMail=localStorage.getItem("User_TrimmedMail")
+
+// const username=localStorage.getItem("username")
+// const User_TrimmedMail=localStorage.getItem("User_TrimmedMail")
 
 
     return(
         <>
         <Nav />
-        <h4 className="text-center user-name">Hi, {username || User_TrimmedMail}</h4>
+        <h4 className="text-center user-name">{message}</h4>
         <div className="products-container">
         {
         products.map((product)=>{

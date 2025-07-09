@@ -1,11 +1,14 @@
 const express=require('express');
 const router=express.Router()
 const {User,Order} =require('../model/model')
-// const Users=require('../model/model')
+const jwt=require('jsonwebtoken');
+const bcrypt=require('bcryptjs');
+const authMiddleware=require('../middleware/authMiddleware')
 
-// const Users=require('../model/model')
+
 router.post('/reg', async (req, res) => {
     const { username, email, password } = req.body;
+    const hashpassword=await bcrypt.hash(password,10);
 
     try {
         
@@ -18,7 +21,7 @@ router.post('/reg', async (req, res) => {
         const newUser = new User({
             username,
             email,
-            password 
+            password:hashpassword
         });
 
         await newUser.save();
@@ -33,20 +36,37 @@ router.post('/reg', async (req, res) => {
 
 router.post('/login',async(req,res)=>{
     const{email,password}=req.body;
-    User.findOne({email:email})
-    .then(user=>{
-        if(user){
-            if(user.password === password){
-                res.json("Success")
-            }
-            else{
-                res.json("the password is incorrect")
-            }
-        }
-        else{
-            res.json("No record excisted")
-        }
-    })
+    const user=await User.findOne({email})
+    // .then(user=>{
+    //     if(user){
+    //         if(user.password === password){
+    //             res.json("Success")
+    //         }
+    //         else{
+    //             res.json("the password is incorrect")
+    //         }
+    //     }
+    //     else{
+    //         res.json("No record excisted")
+    //     }
+    // })
+    if(!user){
+        return res.json("No record excisted")
+    }
+    const ismatch=await bcrypt.compare(password,user.password)
+    if(!ismatch){
+        res.json("the password is incorrect")
+    }
+    else{
+         res.json("Success")
+    }
+
+    const token=jwt.sign({id:user._id,email:user.email},"mysecret",{expiresIn:"1h"});
+    res.json({token})
+})
+
+router.get("/home",authMiddleware,(req,res)=>{
+    res.json({message:`Welcome ${req.user.email}`})
 })
 
 router.post('/checkout', async (req, res) => {

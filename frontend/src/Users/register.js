@@ -28,9 +28,9 @@ function Register() {
       });
 
       if (response.data.message === "User registered successfully") {
-        localStorage.setItem("username", username);
+        // localStorage.setItem("username", username);
         setLoading(false);
-        navigate('/home');
+        navigate('/login');
       } else if (response.data.message === "The email is already taken") {
         alert("The email is already taken. Please login.");
         setLoading(false);

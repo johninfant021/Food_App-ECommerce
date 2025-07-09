@@ -23,5 +23,3 @@ app.use(bodyParser.json())
 app.use('/api/user',userRoutes)
 
 
-// const port=5000;
-

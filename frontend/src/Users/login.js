@@ -8,31 +8,42 @@ function Login() {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
   const [loading,setloading]=useState(false)
-  const user_email=email;
-  const user_TrimmedMail=user_email.replace("@gmail.com"," ")
+  // const user_email=email;
+  // const user_TrimmedMail=user_email.replace("@gmail.com"," ")
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); 
-    setloading(true)
-    if (!email || !password) return alert("Please fill all fields");
-    await axios.post('https://food-app-ecommerce.onrender.com/api/user/login', {
-        email,
-        password,
-      })
-      .then(result=>{
-        console.log(result)
-        if(result.data==="Success"){
-          localStorage.setItem("User_TrimmedMail",user_TrimmedMail)
-          setloading(false)
-            navigate('/home'); 
-        }
-        else{
-            alert("The password is incorrect")
-            setloading(false)
-        }
-      })
-      .catch (err=>console.log(err)) 
+    e.preventDefault();
+    if (!email || !password) {
+      return alert('Please fill all fields');
     }
+
+    setloading(true);
+    try {
+      // 1. Send login request with Axios
+      const res = await axios.post(
+        'https://food-app-ecommerce.onrender.com/api/user/login',
+        { email, password }
+      );
+
+      // 2. Axios puts the parsed JSON on res.data
+      const { token } = res.data;
+
+      if (token) {
+        // 3. Store token and navigate
+        localStorage.setItem('token', token);
+        navigate('/home');
+      } else {
+        alert('Login failed: no token returned');
+      }
+
+    } catch (err) {
+      console.error(err)
+      alert('Login failed');
+
+    } finally {
+      setloading(false);
+    }
+  };
   
 
   return (
