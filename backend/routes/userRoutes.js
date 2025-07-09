@@ -49,7 +49,7 @@ router.post('/login',async(req,res)=>{
 })
 
 router.get("/home",authMiddleware,(req,res)=>{
-    res.json({message:`Welcome ${req.user.email}`})
+    res.json({message:`Welcome ${req.user.email.replace("@gmail.com"," ")}`})
 })
 
 router.post('/checkout', async (req, res) => {
