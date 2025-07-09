@@ -38,8 +38,8 @@ const [message,setmessage]=useState("")
 useEffect(()=>{
   const fetchdata= async()=>{
     const token=localStorage.getItem("token")
-    const res= await fetchdata("https://food-app-ecommerce.onrender.com/api/user/home",{
-      Headers:{
+    const res= await fetch("https://food-app-ecommerce.onrender.com/api/user/home",{
+      headers:{
         Authorization:`Bearer ${token}`
       },
     })
